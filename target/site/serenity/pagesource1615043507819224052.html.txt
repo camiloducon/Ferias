@@ -1,0 +1,586 @@
+<html lang="en" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+  <meta charset="UTF-8">
+  <!--<meta charset="ISO-8859-1">-->
+  
+    
+</head><body><input type="hidden" name="UniversityId" value="">
+	<title>Feria Laboral Unipanamericana</title>
+	
+	
+	
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <meta property="og:title" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="">
+	<meta property="og:description" content="">
+
+  <!-- Styles -->
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.css">
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900|Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="favicon.png">
+ 	<link rel="shortcut icon" href="favicon.png">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/landing.css">
+
+  <script src="js/modernizr-2.7.1.js"></script>
+
+
+
+
+
+
+
+      
+    
+
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <a href="preevento.asp"><img src="img/logo-invertido.png" alt="Logo" class="img-responsive"></a>
+          </div>
+          <div class="col-xs-12 col-sm-6 signin text-right navbar-nav">
+            <a href="#invite" class="scroll">Empresas</a>&nbsp; &nbsp;<a href="contactenos_prehome.asp">Contacto</a>&nbsp; &nbsp;<a href="condiciones_menu_prehome.asp">Términos y condiciones</a>
+          </div>
+        </div>
+
+        <div class="row header-info" style="position:inherit;">
+          <div class="col-sm-12 text-center">
+            <p class="t1 fadeIn">Del 13 al<br> 20 de agosto del 2020</p>
+			  
+			  
+            <h2 class="wow fadeIn titulo_usabana">Feria Laboral Unipanamericana</h2>
+            <br>
+            <p class="lead wow fadeIn" data-wow-delay="0.5s" style="font-size:16px;">Ingresa tu usuario y tu contraseña de <br><img src="img/ee_logo_white.png" class="fadeIn"></p>
+
+            <br>
+
+            <div class="row">
+              <form id="form_login" name="form_login" method="post" action="registro.asp?link=act_hov&amp;new=ok" onsubmit="return validar_login();">
+
+<div class=" col-md-4 col-md-offset-4 col-sm-10 col-sm-offset-1">
+                <div class="row">
+                 	<!--inicio formulario-->
+                   	 
+  							<div class="form-group">
+    						<input name="txtlogin" type="text" maxlength="75" class="form-control" placeholder="Usuario">
+                            <input name="txtpassword" type="password" onkeypress="pulsar(event,'enviar')" class="form-control" placeholder="Contraseña">
+                           <button type="submit" class="btn btn-default btn-primary white text-center" style="    width: 286px; margin-top: 25px;">Ingresar</button>
+ 							 </div>
+
+						
+                   <!--fin formulario-->
+                <a class="btp white" <a="" href="https://uatperson.elempleo.com/co/Account/RecoverPassword/Index?universityId=2221&amp;a=1" target="_blank">Recordar contraseña</a>
+                </div><!--End Button Row-->
+                <div class="row"><p style="margin-top:20px; color:white;">Si no estás registrado, puedes <a href="../includes_feria/include_crear_hv_universidades.asp?ReturnUrl=https://uatperson.elempleo.com/sitios-empresariales/colombia/feria-panamericana/registro.asp" class="js-resume-register" style="color:#D1A10D;">hacerlo aquí</a></p></div>
+              </div></form>
+
+<script language="javascript">
+<!--
+
+var TRIM_LEFT  = 0x0001;
+var TRIM_RIGHT = 0x0002;
+var TRIM_BOTH  = TRIM_LEFT | TRIM_RIGHT;
+
+function strTrim( varText, side )
+{
+  var i = 0;
+  var j = varText.length - 1;
+
+  if( side & TRIM_LEFT )
+  {
+    for( i = 0; i < varText.length; i++ )
+    {
+      if( varText.substring( i, i+1 ) != " " && varText.substring( i, i+1 ) != "\t")
+		{
+        break;
+        }
+    }
+  }
+
+  if( side & TRIM_RIGHT )
+  {
+    for( j = varText.length - 1; j >= 0; j-- )
+    {
+      if( varText.substring( j, j+1 ) != " " &&
+          varText.substring( j, j+1 ) != "\t")
+        break;
+    }
+  }
+
+  if( i <= j )
+    return( varText.substring( i, (j+1) ) );
+  else
+    return("");
+}
+
+function isNumeric(str)
+{
+	for (var i=0; i < str.length; i++) {
+		var ch = str.substring(i, i+1);
+		if(ch < "0" || ch > "9") {
+			return false;
+		}
+	}
+
+	return true;
+}
+
+function isVacio(s)
+{
+   return ((s == null) || (s.length == 0))
+}
+
+
+function IsNumber(Campo, iMin, iMax, iNumDec, Mensaje)
+{
+	var strTest;
+
+	var i = 0;
+	var bResult = true;
+
+	// Validar que el control no sea vacio
+	Campo.value = strTrim(Campo.value,TRIM_BOTH);
+	strTest = new String(Campo.value);
+	if (isVacio(strTest)) {
+		alert('\nEl valor de ' + Mensaje + ' no puede ser vac�o.\n\nPor favor suministre la informaci�n.');
+		Campo.focus();
+		return false;
+	}
+
+	// Validar que los caracteres sean "0..9", "." o "-"
+	for (i = 0; i < strTest.length; i++)
+	{
+		c = strTest.charAt(i);
+		if (bResult && c != '.' && c != '-'  && (c < '0' || c > '9' ))
+		{		
+			alert("El valor de " + Mensaje + " es num�rico.\nNo escriba caracteres diferentes a n�meros.");
+			Campo.focus();
+			return false;
+		}
+	}
+
+	// Si encuentra un punto decimal, validar que sean un real
+	iDot = strTest.indexOf(".");
+	if (iDot > 0)
+	{
+		if (iNumDec > 0)
+		{
+			if (bResult && (iDot < (strTest.length - iNumDec - 1) || iDot == strTest.length -1 ))
+			{
+				alert(Mensaje + " s�lo puede tener " + iNumDec + " d�gitos decimales.");
+				Campo.focus();
+				return false;
+			}
+			else
+				iTest = parseFloat(strTest);
+		}
+		else
+		{
+			alert("El valor de " + Mensaje + " no acepta decimales.");
+			Campo.focus();
+			return false;
+		}
+	}
+	else
+		iTest=parseInt(strTest);
+
+	// Validar el rango SOLO si los valores iMin e iMax son diferentes de CERO (0)
+	if (iMin && iMax) {
+		if (bResult && ((iTest < iMin) || (iTest > iMax )))
+		{
+			alert("El numero escrito en  " + Mensaje + " debe estar entre " + iMin + " y " + iMax);
+			Campo.focus();
+			return false;
+		}
+	}
+
+	return true;
+}
+
+function longitud(s)
+{
+   return (s.length)
+}
+
+function ValidarEmail(Campo, Mensaje)
+{
+	var ok = true;
+
+	with (Campo)
+	{
+		// Validar que los caracteres que contiene la cuenta de correo
+		// esten dentro de los caracteres de la siguiente lista
+		var car_validos = "0123456789abcdefghijlkmnopqrstuvwxyzABCDEFGHIJLKMNOPQRSTUVWXYZ@.-_"
+		var car_otros = "@.-_";
+
+		for (var i=0; i < value.length; i++) {
+			var ch = value.substring(i, i+1);
+			if (car_validos.indexOf(ch) == -1) ok = false;
+		}
+
+		apos = value.indexOf("@");
+		lastpos = value.length-1;
+
+		// Validar primer y ultimo caracter
+		var car1 = value.substring(0, 1);
+		var car2 = value.substring(lastpos, lastpos+1);
+		if ((car_otros.indexOf(car1) != -1) || (car_otros.indexOf(car2) != -1)) ok = false;
+
+		// Validar anterior y siguiente caracter despues de "@"
+		car1 = value.substring(apos-1, apos);
+		car2= value.substring(apos+1, apos+2);
+		if ((car_otros.indexOf(car1) != -1) || (car_otros.indexOf(car2) != -1)) ok = false;
+
+		// Buscar si existe otro simbolo "@" en el campo
+		var subcadena = value.substring(apos + 1, 100);
+		a2pos = subcadena.indexOf("@");
+		spacepos = value.indexOf(" ");
+		dotpos = value.lastIndexOf(".");
+
+		//if (apos < 1 || a2pos != -1 || dotpos - apos < 2 || lastpos - dotpos > 3 || lastpos - dotpos < 2 || spacepos != -1) {
+		if (apos < 1 || a2pos != -1 || lastpos - dotpos < 2 || spacepos != -1) ok = false;
+	}
+
+	if (!ok && Mensaje.length) {
+		alert('\nEl valor de ' + Mensaje + ' (E-Mail) es inv�lido.\n\nPor favor corrija la informaci�n.');
+		Campo.focus();
+		return false;
+	}
+
+	return true;
+
+}
+
+function ValidarCampoTexto(Campo, Mensaje) {
+
+    Campo.value = strTrim(Campo.value,TRIM_BOTH);
+    if (isVacio(Campo.value)) {
+            alert('\nLa opci�n seleccionada para ' + Mensaje + ' no es v�lida.' + '\n\nPor favor corrija la informaci�n.');
+            Campo.focus();
+            return false;
+    }
+
+	return true;
+}
+
+function ValidarCampo(Campo, Mensaje) {
+
+	Campo.value = strTrim(Campo.value,TRIM_BOTH);
+	if (isVacio(Campo.value)) {
+		alert('\nEl valor de ' + Mensaje + ' no puede ser vac�o.\n\nPor favor suministre la informaci�n.');
+		Campo.focus();
+		return false;
+	}
+	else {
+		if (!isNumeric(Campo.value))
+		{
+			alert('El valor de ' + Mensaje + ' debe ser num�rico entero positivo.');
+			Campo.focus();
+			return false;
+		}
+		else
+		{
+			if (parseInt(Campo.value) <= 0) {
+				alert('El valor de ' + Mensaje + ' debe ser mayor que cero.');
+				Campo.focus();
+				return false;
+			}
+		}
+	}
+
+	return true
+}
+
+
+function ValidarCampoII(Campo, Mensaje) {
+
+	Campo.value = strTrim(Campo.value,TRIM_BOTH);
+	if (isVacio(Campo.value)) {
+		alert('\nEl valor de ' + Mensaje + ' no puede ser vac�o.\n\nPor favor suministre la informaci�n.');
+		Campo.focus();
+		return false;
+	}
+	else {
+		if (!isNumeric(Campo.value))
+		{
+			alert('El valor de ' + Mensaje + ' debe ser num�rico entero positivo.');
+			Campo.focus();
+			return false;
+		}
+		else
+		{
+			if (parseInt(Campo.value) < 0) {
+				alert('El valor de ' + Mensaje + ' debe ser mayor o igual que cero.');
+				Campo.focus();
+				return false;
+			}
+		}
+	}
+
+	return true
+}
+
+function ValidarCombo(Combo, Mensaje) {
+
+	if (Combo.selectedIndex == 0){
+		alert('\nEl campo ' + Mensaje + ' no puede ser vac�o.' + '\n\nPor favor suministre la informaci�n.');
+		Combo.focus();
+		return false;
+	}
+
+	return true;
+}
+
+function ValidarComboMultiple(Combo, Mensaje) {
+
+	if (Combo.selectedIndex == -1){
+		alert('\nEl campo ' + Mensaje + ' no puede ser vac�o.' + '\n\nPor favor suministre la informaci�n.');
+		Combo.focus();
+		return false;
+	}
+
+	return true;
+}
+
+
+function ValidarFecha(Anno, Mes, Dia) {
+
+	var intAnno = parseInt(Anno);
+	var intMes = parseInt(Mes);
+	var intDia = parseInt(Dia);
+
+	// Validar que los valores no sean igual a cero
+	if ((Anno == 0) || (Mes == 0) || (Dia == 0)) {
+		alert('Debe elegir los valores para el mes, el dia y el a�o.');
+		return false;
+	}
+
+	// Validar que, en un a�o NO bisiesto, el numero de dias del mes de Febrero no sea mayor que 28
+	if (((intAnno % 4) != 0) && (intMes == 2) && (intDia > 28)) {
+		alert('El mes de Febrero no puede contener m�s de 28 d�as.\n\nPor favor, corrija la informaci�n.');
+		return false;
+	}
+
+	// Validar que, en un a�o bisiesto, el numero de dias del mes de Febrero no sea mayor que 29
+	if (((intAnno % 4) == 0) && (intMes == 2) && (intDia > 29)) {
+		alert('El mes de Febrero no puede contener m�s de 29 d�as.\n\n Por favor, corrija la informaci�n.');
+		return false;
+	}
+
+	// Validar que el dia sea valido para el mes elegido, no mayor que 30
+	if ( ((intMes == 4) || (intMes == 6) || (intMes == 9) || (intMes == 11)) && (intDia > 30) ) {
+		alert('El mes seleccionando s�lo contiene 30 d�as.\n\nPor favor, corrija la informaci�n.');
+		return false;
+	}
+
+	return true;
+}
+
+
+function CompararFechas(AnnoInferior, MesInferior, DiaInferior, AnnoSuperior, MesSuperior, DiaSuperior, strCampoInferior, strCampoSuperior) {
+
+	var mensaje = 'La fecha ' + strCampoInferior + ' debe ser menor o igual que la fecha ' + strCampoSuperior;
+	// --------------
+	var intAnnoInferior = parseInt(AnnoInferior);
+	var intMesInferior = parseInt(MesInferior);
+	var intDiaInferior = parseInt(DiaInferior);
+	// --------------
+	var intAnnoSuperior = parseInt(AnnoSuperior);
+	var intMesSuperior = parseInt(MesSuperior);
+	var intDiaSuperior = parseInt(DiaSuperior);
+
+	var dteFechaInferior = new Date(parseInt(AnnoInferior), parseInt(MesInferior) - 1, parseInt(DiaInferior))
+	var dteFechaSuperior = new Date(parseInt(AnnoSuperior), parseInt(MesSuperior) - 1, parseInt(DiaSuperior))
+
+	// Restar la fecha inferior de la superior
+	dif_dias = dteFechaSuperior - dteFechaInferior
+	if (dif_dias < 0) {
+		alert(mensaje);
+		return false;
+	}
+
+	return true;
+}
+
+//-->
+
+</script>
+<script type="text/javascript" language="javascript">
+function validar_login (){
+var_login = document. form_login.txtlogin.value;
+var_password = document. form_login.txtpassword.value;
+if ((var_login != "") && (var_password != "")){
+return true;
+}else{
+alert("Debe ingresar un login y un Password v�lidos!!!");
+return false;
+}
+}
+function pulsar(e,obj) {
+	tecla=(document.all) ? e.keyCode : e.which;
+	if(tecla==13){
+  	document.getElementById(obj).onclick();
+}
+}
+</script>
+
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="mouse-icon hidden-xs">
+				<div class="scroll"></div>
+			</div>
+
+
+
+
+	<section id="invite" class="pad-lg light-gray-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2 text-center">
+        <img src="img/icon_2.png">
+            <h3 class="black">Participa como empresa en la Feria Laboral</h3>
+            <br>
+            <p class="black">Tu empresa puede participar en la Feria Laboral publicando ofertas sin ningún costo, que serán consultadas por los graduados de la Universidad. Para publicar una oferta, debes iniciar sesión con el usuario y contraseña de tu organización.</p>
+            <br>
+
+            <div class="row">
+                <form role="form">
+                  <div class="form-group">
+                  </div>
+				  <div class="col-xs-12 col-sm-6">
+                  <a onclick="window.open('https://uat.elempleo.com/colombia//Files/BasesUniversitarias/unipanamericana/Home.aspx')" class="btn btn_empresa btn-block btn-primary btn-lg">Publicar ofertas de empleo</a>
+				  </div>
+				  <div class="col-xs-12 col-sm-6">
+				  <a onclick="window.open('https://uatperson.elempleo.com/co/iniciar-sesion')" class="btn btn-block btn-lg btn-primary btn_empresa">Empresas registradas</a>
+				  </div>
+                </form>
+              </div>
+            </div><!--End Form row-->
+
+          </div>
+        </div>
+      
+    </section>
+
+
+
+    <footer>
+      <div class="blue_footer">
+      <div class="container">
+        
+        <div class="row">
+          
+          <div class="col-sm-12 text-center">
+            <p style="font-weight: light;">Unipanamericana Fundación Universitaria Panamericana P.J. Resolución 17464 del 2 de nov. de 2018. - VIGILADA MINEDUCACIÓN -
+ </p>
+          </div>
+          <a href="condiciones_menu_prehome.asp">Términos y condiciones</a>
+        </div>
+      </div>
+      </div>
+      
+      <div class="dark_footer">
+      	<div class="container">
+        	<div class="row">
+            	<img class="pull-right" src="img/ee_logo_white.png" alt=""><p>Software © Leadersearch S.A.S. elempleo.com Sitio Empresarial. Todos los derechos reservados.</p>
+            </div>
+        </div>
+      </div>
+    
+     <div class="container">
+        <div class="row legal text-center" style="padding-bottom:30px; margin-top:15px;">
+            <div class="col-sm-8"><small class="text-center" style="font-family: Arial, sans-serif;">Vinculado a la red de prestadores del Servicio Público de Empleo.
+              Autorizado por la Unidad Administrativa Especial del Servicio Público de Empleo según resolución No. 174 del 19 de febrero de 2016. <a href="http://contenido.elempleo.com/mailperso/ReglamentoLeadersearchOperadorAutorizado.pdf" target="_blank" class="blue">Ver reglamento</a> de autorización.</small></div>
+            <div class="col-sm-4">
+              <div class="logos_l">
+                <img src="images/ser-empleo.png" class="pull-right" alt="">
+                <img src="images/mintrabajo.png" class="pull-right" alt="">
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+
+</footer>
+
+
+    <!-- Javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Omniture -->
+    <script language="JavaScript" type="text/javascript" src="../includes_feria/s_code_remote.js"></script>
+<script language="JavaScript">
+  var $resumeRegisterBtn;
+
+  // Omniture vars
+  var s_code;
+  var omniture = {
+    pageName: '',
+    channel: '',
+    buCompleteName: '',
+  };
+
+  
+    omniture.pageName = "elempleo: personas: feria registro";
+    omniture.channel = "elempleo: personas: feria Unipanamericana";
+  
+    omniture.buCompleteName = "Unipanamericana";
+  
+
+  $resumeRegisterBtn = $('.js-resume-register');
+
+  // Set values for omniture
+  s.pageName = omniture.pageName;
+  s.channel = omniture.channel;
+
+  // Setting url from view in evar 76
+  s.eVar76 = window.location.href;
+
+  s_code = s.t();
+
+  function omnitureResumeRegister () {
+    s.linkTrackVars = "events";
+    s.events = 'event75';
+    s.eVar47 = omniture.buCompleteName;
+    s.tl(true,"o","Registrar hoja de vida");
+  }
+
+  // Omniture binds
+  $resumeRegisterBtn.on('click', function(event) {
+	event.preventDefault();
+	
+	omnitureResumeRegister();
+	window.location = $(this).attr('href');
+  });
+
+  if(s_code) {
+    document.write(s_code);
+  }
+</script>
+
+
+    
+
+</body></html>

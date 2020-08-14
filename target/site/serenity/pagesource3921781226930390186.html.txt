@@ -1,0 +1,393 @@
+<html style="" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="">
+	<meta property="og:description" content="">
+	<meta name="twitter:title" content="">
+	<meta name="twitter:image" content="">
+	<meta name="twitter:url" content="">
+	<meta name="twitter:card" content="">
+
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+
+	<!-- Pricing -->
+	<link rel="stylesheet" href="css/pricing.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="fh5co-loader" style="display: none;"></div>
+	
+	<div id="page"><a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle fh5co-nav-white"><i></i></a><div id="fh5co-offcanvas"><ul>
+							<li class="active"><a href="index.asp">Inicio</a></li>
+							<li class="offcanvas-has-dropdown">
+								<a>Facultades</a>
+								<ul class="dropdown">
+									<li><a href="facultad-ciencias-empresariales.asp">Facultad de Ciencias Empresariales</a></li>
+									<li><a href="facultad-ingenieria.asp">Facultad de Ingeniería</a></li>
+									<li><a href="facultad-comunicacion.asp">Facultad de Comunicación</a></li>
+								</ul>
+							</li>
+							<li><a href="contactenos.asp">Contacto</a></li>
+							<li><a href="condiciones_menu.asp">Términos y Condiciones</a></li>
+							<li class="btn-cta"><a href="../includes_feria/include_editar_hv_universidades.asp"><span>Actualizar HV</span></a></li>
+							<li class="btn-cta btn-close"><a href="registro.asp?logout=true"><span>Cerrar sesión</span></a></li>
+						</ul></div>
+			<nav class="fh5co-nav navbar-fixed-top" role="navigation">
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-4 col-md-3">
+						<div id="fh5co-logo"><a href="index.asp">
+								<img class="img-responsive" src="images/logo-u-head.png" alt="logo feria universitaria - elempleo">
+							</a></div>
+					</div>
+					<div class="col-xs-9 text-right menu-1">
+						<ul>
+							<li class="active"><a href="index.asp">Inicio</a></li>
+							<li class="has-dropdown">
+								<a>Facultades</a>
+								<ul class="dropdown">
+									<li><a href="facultad-ciencias-empresariales.asp">Facultad de Ciencias Empresariales</a></li>
+									<li><a href="facultad-ingenieria.asp">Facultad de Ingeniería</a></li>
+									<li><a href="facultad-comunicacion.asp">Facultad de Comunicación</a></li>
+								</ul>
+							</li>
+							<li><a href="contactenos.asp">Contacto</a></li>
+							<li><a href="condiciones_menu.asp">Términos y Condiciones</a></li>
+							<li class="btn-cta"><a href="../includes_feria/include_editar_hv_universidades.asp"><span>Actualizar HV</span></a></li>
+							<li class="btn-cta btn-close"><a href="registro.asp?logout=true"><span>Cerrar sesión</span></a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+
+	<aside id="fh5co-hero">
+		<div class="flexslider">
+			
+	  	<div class="flex-viewport" style="overflow: hidden; position: relative; height: 630px;"><ul class="slides" style="height: 800%; position: absolute; width: 100%; transition-duration: 0s; transform: translate3d(0px, -630px, 0px);"><li style="background-image: url(&quot;images/img_bg_2.jpg&quot;); display: block;" class="clone" aria-hidden="true">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="row">
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
+			   				<div class="slider-text-inner">
+			   					<h1>Consulta la oferta académica para ver las ofertas de empleo disponibles</h1>
+			   				</div>
+			   			</div>
+			   		</div>
+		   		</div>
+		   	</li>
+		   	<li style="background-image: url(&quot;images/img_bg_1.jpg&quot;); display: block;" class="flex-active-slide" data-thumb-alt="">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="row">
+			   			<div class="col-xs-12 col-md-8 col-md-offset-2 text-center slider-text animated fadeInUp">
+			   				<div class="slider-text-inner">
+			   					<h1>Bienvenido a la Feria Laboral Unipanamericana</h1>
+			   				</div>
+			   			</div>
+			   		</div>
+		   		</div>
+		   	</li>
+		   	<li style="background-image: url(&quot;images/img_bg_2.jpg&quot;); display: block;" data-thumb-alt="">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="row">
+			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
+			   				<div class="slider-text-inner">
+			   					<h1>Consulta la oferta académica para ver las ofertas de empleo disponibles</h1>
+			   				</div>
+			   			</div>
+			   		</div>
+		   		</div>
+		   	</li>		   	
+		  	<li style="background-image: url(&quot;images/img_bg_1.jpg&quot;); display: block;" class="clone" aria-hidden="true">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="row">
+			   			<div class="col-xs-12 col-md-8 col-md-offset-2 text-center slider-text">
+			   				<div class="slider-text-inner">
+			   					<h1>Bienvenido a la Feria Laboral Unipanamericana</h1>
+			   				</div>
+			   			</div>
+			   		</div>
+		   		</div>
+		   	</li></ul></div><ol class="flex-control-nav flex-control-paging"><li><a href="#" class="flex-active">1</a></li><li><a href="#">2</a></li></ol><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#">Previous</a></li><li class="flex-nav-next"><a class="flex-next" href="#">Next</a></li></ul></div>
+	</aside>
+    	<div id="fh5co-steps">
+		<div class="container">
+			<div class="row animate-box fadeInUp animated-fast">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2><span>¿Cómo aplicar a ofertas?</span></h2>
+				</div>
+			</div>
+			<div class="row row-padded-mb">
+				<div class="col-md-4 animate-box">
+					<div class="fh5co-event">
+						<div class="date text-center"><span>1</span></div>
+						<img class="img-responsive img-50" src="images/step-1.svg" title="Mouse by Iconic from the Noun Project" alt="Opción A, Búscar oferta desde la facultad">
+						<h3><a href="#fh5co-course">Ingresa a <br>tu facultad</a></h3>
+						<p>Selecciona la facultad a la cual perteneces y luego haz clic en la opción para ver ofertas de empleo.</p>
+					</div>
+				</div>
+				
+				<div class="col-md-4 animate-box">
+					<div class="fh5co-event">
+						<div class="date text-center"><span>2</span></div>
+						<img class="img-responsive img-50" src="images/step-2.svg" title="https://thenounproject.com/term/search-document/225932/" alt="Opción A, Búscar oferta desde el área">
+						<h3><a href="#fh5co-area">Busca ofertas por tu área de interés</a></h3>
+						<p>Consulta el listado de ofertas disponibles y selecciona la que te interese para ver la información completa.</p>
+					</div>
+				</div>
+				
+				<div class="col-md-4 animate-box">
+					<div class="fh5co-event">
+						<div class="date text-center"><span>3</span></div>
+						<img class="img-responsive img-50" src="images/step-3.svg" title="select by mikicon from the Noun Project" alt="Paso 2, Aplica a ofertas">
+						<h3><a>Selecciona y aplica a ofertas</a></h3>
+						<p>Luego de leer la descripción y requisitos, haz clic sobre el botón “Aplicar a esta oferta”, tu hoja de vida será enviada a la empresa que publicó la vacante.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="fh5co-area">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<h2>Ofertas de empleo por áreas</h2>
+					<p>Encuentra ofertas de empleo seleccionando el área de tu interés o que más se acerque a tu perfil. </p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="fas fa-chart-bar"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="oferta_sitio_area.asp?idarea=2&amp;area=Administrativa-y-Financiera">Administrativa y Financiera</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="fas fa-headset"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="oferta_sitio_area.asp?idarea=5&amp;area=Comercial-Ventas-Telemercadeo">Comercial, Ventas y Telemercadeo</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="fas fa-globe-americas"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="oferta_sitio_area.asp?idarea=6&amp;area=Comercio-Exterior">Comercio Exterior</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="fas fa-cash-register"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="oferta_sitio_area.asp?idarea=53&amp;area=Compras-e-Inventarios">Compras e Inventarios</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="fas fa-notes-medical"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="oferta_sitio_area.asp?idarea=22&amp;area=Salud">Salud</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="fas fa-hard-hat"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="oferta_sitio_area.asp?idarea=24&amp;area=Seguridad-Industrial-Ambiental-y-Ocupacional">Seguridad Industrial, Ambiental y Ocupacional</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="fas fa-comments"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="oferta_sitio_area.asp?idarea=25&amp;area=Servicio-al-Cliente">Servicio al Cliente</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="fas fa-users"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="oferta_sitio_area.asp?idarea=47&amp;area=Sistemas-y-Tecnologia">Sistemas y Tecnología</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 text-center">
+					<a class="btn btn-primary btn-lg" href="areas.asp">Ver Todas las Áreas</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+	<div id="fh5co-course">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<h2>Facultades</h2>
+					<p>Encuentra ofertas de empleo por facultad.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 animate-box">
+					<div class="course">
+						<a href="facultad-ciencias-empresariales.asp" class="course-img" style="background-image: url(images/project-1.jpg);">
+						</a>
+						<div class="desc">
+							<h3><a href="facultad-ciencias-empresariales.asp">Facultad de Ciencias Empresariales<br>&nbsp;</a></h3>
+							<p>Profesional competente, íntegro, ético, con espíritu emprendedor, capaz de desempeñar funciones con visión proactiva, holística y con alto liderazgo en las diferentes áreas de la organización.</p>
+							<span><a href="facultad-ciencias-empresariales.asp" class="btn btn-primary btn-sm btn-course">Ver ofertas</a></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 animate-box">
+					<div class="course">
+						<a href="facultad-ingenieria.asp" class="course-img" style="background-image: url(images/project-2.jpg);">
+						</a>
+						<div class="desc">
+							<h3><a href="facultad-ingenieria.asp">Facultad de Ingeniería</a></h3>
+							<p>Profesional integral capaz de diseñar, comprender, asimilar, adaptar, incorporar, especificar, integrar, poner en servicio, mantener y operar, sistemas de Tecnologías de la Información. </p>
+							<span><a href="facultad-ingenieria.asp" class="btn btn-primary btn-sm btn-course">Ver ofertas</a></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 animate-box">
+					<div class="course">
+						<a href="facultad-comunicacion.asp" class="course-img" style="background-image: url(images/project-3.jpg);">
+						</a>
+						<div class="desc">
+							<h3><a href="facultad-comunicacion.asp">Facultad de Comunicación</a></h3><p>Profesional con espíritu crítico e investigativo, con formación académica teórico-práctica y comprometido con la construcción de país.</p>
+							<span><a href="facultad-comunicacion.asp" class="btn btn-primary btn-sm btn-course">Ver Ofertas</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+		<div id="fh5co-footer" role="contentinfo">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">Unipanamericana Fundación Universitaria Panamericana P.J. Resolución 17464 del 2 de nov. de 2018. - VIGILADA MINEDUCACIÓN - </small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+<footer id="footer" class="footer footer-type-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-9">
+       	  Software Leadersearch S.A.S. elempleo.com Sitio empresarial. Todos los derechos reservados. <a href="condiciones_menu_prehome.asp">Ver términos y condiciones</a>
+			</div>
+          <div class="col-sm-3 text-center"><img src="images/logo-ee-footer.gif" width="163" height="33" alt=""></div>
+        </div>
+        <div class="row credit">
+        	<div class="col-sm-8">6u
+           	
+            	Vinculado a la red de prestadores del Servicio Público de Empleo.
+Autorizado por la Unidad Administrativa Especial del Servicio Público de Empleo según resolución No. 174 del 19 de febrero de 2016.
+            <a href="http://contenido.elempleo.com/mailperso/ReglamentoLeadersearchOperadorAutorizado.pdf" target="_blank">Ver reglamento de autorización. </a></div>
+           <div class="col-sm-2 text-center img-responsive"><img src="images/logo-min-trabajo.gif" width="148" alt=""></div>
+			   <div class="col-sm-2 text-center img-responsive"><img src="images/logo-sde.jpg" width="150" alt=""></div>
+        </div>
+      </div>
+    </footer>
+		
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Count Down -->
+	<script src="js/simplyCountdown.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	
+
+
+</body></html>
