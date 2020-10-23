@@ -4,10 +4,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.junit.Assert;
+
 import com.ferias.steps.AplicarOfertaSteps;
 import com.ferias.utils.DataDrivenExcel;
 import com.ferias.utils.Excel;
-
 import cucumber.api.DataTable;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
@@ -19,7 +20,7 @@ public class AplicarOfertaStepsDefinition {
 
 	DataDrivenExcel dataDriverExcel = new DataDrivenExcel();
 	List<Map<String, String>> processExcel;
-	Map<String, String> data = new HashMap<String, String>();
+	Map<String, String> data = new HashMap<>();
 
 	@Steps
 	AplicarOfertaSteps aplicarOfertaSteps;
@@ -45,5 +46,6 @@ public class AplicarOfertaStepsDefinition {
 	@Entonces("^puedo aplicar a una de ellas$")
 	public void puedoAplicarAUnaDeEllas() {
 		aplicarOfertaSteps.buscarOferta(data.get("Oferta"));
+		Assert.assertTrue("No se aplico a la aoferta correctamente", aplicarOfertaSteps.aplicacionDeOfertaExitosa());
 	}
 }

@@ -16,5 +16,8 @@ Característica: Aplicar a Ofertas
 
     Ejemplos: 
       | Fila |
-      |    1 | 
+      |    1 |
+      |    2 |
+      |    3 |
+      |    4 |                             
                 

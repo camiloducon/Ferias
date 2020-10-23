@@ -33,7 +33,7 @@ public class CrearHojaDeVidaSteps {
 	}
 
 	@Step
-	public void CompletarCreacionHojaDeVida(String contrasena, String nombres, String primerApellido,
+	public void completarCreacionHojaDeVida(String contrasena, String nombres, String primerApellido,
 			String segundoApellido, String fechaNacimiento, String tipoEstudios, String profesionOcupacion,
 			String ultimoCargo, String dondeTrabajas, String dondeTePuedenLlamar) {
 		completarCreacionDeCuentaPage.completarCreaciónHojaDeVida(contrasena, nombres, primerApellido, segundoApellido,
@@ -41,7 +41,7 @@ public class CrearHojaDeVidaSteps {
 	}
 	
 	@Step
-	public boolean confirmarCreaciónPerfil() {
+	public boolean confirmarCreacionPerfil() {
 		return miHojaDeVidaPage.confirmarCreacionPerfil();
 	}
 
@@ -49,19 +49,19 @@ public class CrearHojaDeVidaSteps {
 	public void completarSecciones(String completarInformacionPersonal, String ciudad, String direccion,
 			String ciudadNacimiento, String telefonoSecundario, String describeTuPerfilLaboral, String describeTuPerfil,
 			String aniosExperiencia, String aspiracionSalarial, String movilidadLaboral, String tuExperienciaLaboral,
-			String sectorEmpresa, String subSectorEmpresa, String fechaMesInicio, String fechaAñoInicio,
-			String trabajoActualmenteEnEstaEmpresa, String fechaMesFinalizacion, String fechaAñoFinalizacion,
+			String sectorEmpresa, String subSectorEmpresa, String fechaMesInicio, String fechaYearInicio,
+			String trabajoActualmenteEnEstaEmpresa, String fechaMesFinalizacion, String fechaYearFinalizacion,
 			String cargoEquivalente, String nivelCargo, String area, String logrosResposabilidades,
-			String telefonoEmpresa, String ciudadEmpresa, String tuFormacionAcademica, String areaEstudios, String estado, String fechaMesInicioEstudio,
-			String fechaAñoInicioEstudio, String fechaMesFinalizacionEstudio, String fechaAñoFinalizacionEstudio,
+			String telefonoEmpresa, String ciudadEmpresa, String tuFormacionAcademica, String nivelEstudio, String areaEstudios, String estado, String fechaMesInicioEstudio,
+			String fechaYearInicioEstudio, String fechaMesFinalizacionEstudio, String fechaYearFinalizacionEstudio,
 			String tituloOtorgado, String institucion, String otraInstitucion, String ciudadInstitucion) {
 		miHojaDeVidaPage.completarSecciones(completarInformacionPersonal, ciudadEmpresa, direccion, ciudadNacimiento,
 				telefonoSecundario, describeTuPerfilLaboral, describeTuPerfil, aniosExperiencia, aspiracionSalarial,
-				movilidadLaboral, tuExperienciaLaboral, sectorEmpresa, subSectorEmpresa, fechaMesInicio, fechaAñoInicio,
-				trabajoActualmenteEnEstaEmpresa, fechaMesFinalizacion, fechaAñoFinalizacion, cargoEquivalente,
-				nivelCargo, area, logrosResposabilidades, telefonoEmpresa, ciudadEmpresa, tuFormacionAcademica,
-				areaEstudios, estado, fechaMesInicioEstudio, fechaAñoInicioEstudio, fechaMesFinalizacionEstudio,
-				fechaAñoFinalizacionEstudio, tituloOtorgado, institucion, otraInstitucion, ciudadInstitucion);
+				movilidadLaboral, tuExperienciaLaboral, sectorEmpresa, subSectorEmpresa, fechaMesInicio, fechaYearInicio,
+				trabajoActualmenteEnEstaEmpresa, fechaMesFinalizacion, fechaYearFinalizacion, cargoEquivalente,
+				nivelCargo, area, logrosResposabilidades, telefonoEmpresa, ciudadEmpresa, tuFormacionAcademica, nivelEstudio,
+				areaEstudios, estado, fechaMesInicioEstudio, fechaYearInicioEstudio, fechaMesFinalizacionEstudio,
+				fechaYearFinalizacionEstudio, tituloOtorgado, institucion, otraInstitucion, ciudadInstitucion);
 	}
 
 }

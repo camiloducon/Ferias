@@ -1,6 +1,7 @@
 package com.ferias.pages;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -38,7 +39,7 @@ public class MiHojaDeVidaPage extends PageObject{
 	WebElementFacade cmbFechaMesInicio;
 
 	@FindBy(xpath = "//input[contains(@name,'StartDate.date')]")
-	WebElementFacade txtFechaAñoInicio;
+	WebElementFacade txtFechaYearInicio;
 
 	@FindBy(name = "IsCurrentlyWorking")
 	WebElementFacade chkTrabajoActualmenteEnEstaEmpresa;
@@ -47,7 +48,7 @@ public class MiHojaDeVidaPage extends PageObject{
 	WebElementFacade cmbFechaMesFinalizacion;
 
 	@FindBy(xpath = "//input[contains(@name,'EndDate.date')]")
-	WebElementFacade txtFechaAñoFinalizacion;
+	WebElementFacade txtFechaYearFinalizacion;
 
 	@FindBy(name = "EquivalentPosition.SelectedIds")
 	WebElementFacade cmbCargoEquivalente;
@@ -71,7 +72,7 @@ public class MiHojaDeVidaPage extends PageObject{
 	@FindBy(xpath = "//*[contains(@class, 'save-laboral-experience')]")
 	WebElementFacade btnGuardarExperiencia;
 
-	@FindBy(xpath = "//button[@class='btn btn-primary btn-complete js-btn-complete']")
+	@FindBy(xpath = "//*[@id='estudios-formales']/div[1]//button")
 	WebElementFacade btnCompletarTusEstudios;
 
 	@FindBy(xpath = "//a[@class='btn btn-sm info-actions js-anchor-studies btn-ghost-reverse']")
@@ -92,7 +93,7 @@ public class MiHojaDeVidaPage extends PageObject{
 	@FindBy(name = "SecondPhone")
 	WebElementFacade txtTelefonoSecundario;
 
-	@FindBy(xpath = "//div[@class='col-xs-12 col-sm-8 col-sm-pull-4 module-flex-child']//button[@class='btn btn-primary btn-save'][1]")
+	@FindBy(xpath = "//form[@class='js-form-personalinfo']/button[contains(@class, 'btn-save')]")
 	WebElementFacade btnGuardarInformacion;
 
 	@FindBy(name = "Profile")
@@ -124,13 +125,13 @@ public class MiHojaDeVidaPage extends PageObject{
 	WebElementFacade cmbFechaMesInicioEstudio;
 
 	@FindBy(xpath = "//form[@class='js-form-formal-education']//input[contains(@name,'StartDate.date')]")
-	WebElementFacade txtFechaAñoInicioEstudio;
+	WebElementFacade txtFechaYearInicioEstudio;
 
 	@FindBy(xpath = "//form[@class='js-form-formal-education']//select[contains(@name,'EndDate.date')]")
 	WebElementFacade cmbFechaMesFinalizacionEstudio;
 
 	@FindBy(xpath = "//form[@class='js-form-formal-education']//input[contains(@name,'EndDate.date')]")
-	WebElementFacade txtFechaAñoFinalizacionEstudio;
+	WebElementFacade txtFechaYearFinalizacionEstudio;
 
 	@FindBy(name = "Degree")
 	WebElementFacade txtTituloOtorgado;
@@ -147,16 +148,25 @@ public class MiHojaDeVidaPage extends PageObject{
 	//@FindBy(xpath = "//div[@class='form-group countries-wrapper js-countries-wrapper']//following::button[@class='btn btn-primary btn-save'][3]")
 	@FindBy(xpath = "//*[contains(@class, 'formal-education')]/button[contains(@class, 'save')]")
 	WebElementFacade btnGuardarEstudios;
+	
+	@FindBy(xpath = "//*[contains(@class, 'fa fa-spinner')]")
+	WebElementFacade spinner;
+	
+	@FindBy(xpath = "//*[@id='statusChange']//div[3]/button")
+	WebElementFacade btnContinuar;
+	
+	@FindBy(name = "EducationLevels.SelectedId")
+	WebElementFacade cmbNivelEstudio;
 
 	public void completarSecciones(String completarInformacionPersonal, String ciudad, String direccion,
 			String ciudadNacimiento, String telefonoSecundario, String describeTuPerfilLaboral, String describeTuPerfil,
 			String aniosExperiencia, String aspiracionSalarial, String movilidadLaboral, String tuExperienciaLaboral,
-			String sectorEmpresa, String subSectorEmpresa, String fechaMesInicio, String fechaAñoInicio,
-			String trabajoActualmenteEnEstaEmpresa, String fechaMesFinalizacion, String fechaAñoFinalizacion,
+			String sectorEmpresa, String subSectorEmpresa, String fechaMesInicio, String fechaYearInicio,
+			String trabajoActualmenteEnEstaEmpresa, String fechaMesFinalizacion, String fechaYearFinalizacion,
 			String cargoEquivalente, String nivelCargo, String area, String logrosResposabilidades,
-			String telefonoEmpresa, String ciudadEmpresa, String tuFormacionAcademica, String areaEstudios,
-			String estado, String fechaMesInicioEstudio, String fechaAñoInicioEstudio,
-			String fechaMesFinalizacionEstudio, String fechaAñoFinalizacionEstudio, String tituloOtorgado,
+			String telefonoEmpresa, String ciudadEmpresa, String tuFormacionAcademica, String nivelEstudio, String areaEstudios,
+			String estado, String fechaMesInicioEstudio, String fechaYearInicioEstudio,
+			String fechaMesFinalizacionEstudio, String fechaYearFinalizacionEstudio, String tituloOtorgado,
 			String institucion, String otraInstitucion, String ciudadInstitucion) {
 
 		if (completarInformacionPersonal.equals("Si")) {
@@ -166,13 +176,13 @@ public class MiHojaDeVidaPage extends PageObject{
 			describeTuPerfilLaboral(describeTuPerfil, aniosExperiencia, aspiracionSalarial, movilidadLaboral);
 		}
 		if (tuExperienciaLaboral.equals("Si")) {
-			adicionarExperiencia(sectorEmpresa, subSectorEmpresa, fechaMesInicio, fechaAñoInicio,
-					trabajoActualmenteEnEstaEmpresa, fechaMesFinalizacion, fechaAñoFinalizacion, cargoEquivalente,
+			adicionarExperiencia(sectorEmpresa, subSectorEmpresa, fechaMesInicio, fechaYearInicio,
+					trabajoActualmenteEnEstaEmpresa, fechaMesFinalizacion, fechaYearFinalizacion, cargoEquivalente,
 					nivelCargo, area, logrosResposabilidades, telefonoEmpresa, ciudadEmpresa);
 		}
 		if (tuFormacionAcademica.equals("Si")) {
-			tuFormacionAcademica(areaEstudios, estado, fechaMesInicioEstudio, fechaAñoInicioEstudio,
-					fechaMesFinalizacionEstudio, fechaAñoFinalizacionEstudio, tituloOtorgado, institucion,
+			tuFormacionAcademica(nivelEstudio, areaEstudios, estado, fechaMesInicioEstudio, fechaYearInicioEstudio,
+					fechaMesFinalizacionEstudio, fechaYearFinalizacionEstudio, tituloOtorgado, institucion,
 					otraInstitucion, ciudadInstitucion);
 		}
 
@@ -193,6 +203,7 @@ public class MiHojaDeVidaPage extends PageObject{
 
 	public void completarTuInfomacionPersonal(String ciudad, String direccion, String ciudadNacimiento,
 			String telefonoSecundario) {
+		esperaMientrasCarga();
 		waitFor(ExpectedConditions.visibilityOf(btnCompletarInformacionPersonal));
 		withAction().moveToElement(btnCompletarInformacionPersonal).perform();
 		waitFor(ExpectedConditions.elementToBeClickable(btnCompletarInformacionPersonal));
@@ -210,7 +221,7 @@ public class MiHojaDeVidaPage extends PageObject{
 		txtTelefonoSecundario.sendKeys(telefonoSecundario);
 		if (btnGuardarInformacion.isCurrentlyVisible()) {
 			btnGuardarInformacion.click();
-			helpers.esperaSelenium(5);
+			esperaMientrasCarga();
 		}
 
 	}
@@ -224,23 +235,25 @@ public class MiHojaDeVidaPage extends PageObject{
 		// withAction().moveToElement(lstBtnMovilidadLaboral).click().build().perform();
 		// seleccionarMovilidadLaboral(movilidadLaboral);
 		withAction().moveToElement(btnGuardarPerfilLaboral).perform();
+		waitFor(ExpectedConditions.elementToBeClickable(btnGuardarPerfilLaboral));
+		helpers.esperaSelenium(2);
 		btnGuardarPerfilLaboral.click();
-		helpers.esperaSelenium(10);
+		esperaMientrasCarga();
 	}
 
 	public void adicionarExperiencia(String sectorEmpresa, String subSectorEmpresa, String fechaMesInicio,
-			String fechaAñoInicio, String trabajoActualmenteEnEstaEmpresa, String fechaMesFinalizacion,
-			String fechaAñoFinalizacion, String cargoEquivalente, String nivelCargo, String area,
+			String fechaYearInicio, String trabajoActualmenteEnEstaEmpresa, String fechaMesFinalizacion,
+			String fechaYearFinalizacion, String cargoEquivalente, String nivelCargo, String area,
 			String logrosResposabilidades, String telefonoEmpresa, String ciudadEmpresa) {
 		btnCompletarTuExperienciaLaboral.click();
 		btnAgregarExperiencia.click();
 		cmbSectorEmpresa.selectByVisibleText(sectorEmpresa);
 		cmbSubSectorEmpresa.selectByVisibleText(subSectorEmpresa);
 		cmbFechaMesInicio.selectByVisibleText(fechaMesInicio);
-		txtFechaAñoInicio.sendKeys(fechaAñoInicio);
+		txtFechaYearInicio.sendKeys(fechaYearInicio);
 		if (trabajoActualmenteEnEstaEmpresa.equals("No")) {
 			cmbFechaMesFinalizacion.selectByVisibleText(fechaMesFinalizacion);
-			txtFechaAñoFinalizacion.sendKeys(fechaAñoFinalizacion);
+			txtFechaYearFinalizacion.sendKeys(fechaYearFinalizacion);
 		}
 		cmbCargoEquivalente.selectByVisibleText(cargoEquivalente);
 		cmbNivelCargo.selectByVisibleText(nivelCargo);
@@ -253,25 +266,32 @@ public class MiHojaDeVidaPage extends PageObject{
 		selCiudadEmpresa.click();
 		if (btnGuardarExperiencia.isCurrentlyVisible()) {
 			btnGuardarExperiencia.click();
-			helpers.esperaSelenium(5);
+			esperaMientrasCarga();
 		}
-
-
+		if (btnContinuar.isCurrentlyVisible()) {
+			btnContinuar.click();
+			esperaMientrasCarga();
+		}
+		
 	}
 
-	@SuppressWarnings("unlikely-arg-type")
-	public void tuFormacionAcademica(String areaEstudios, String estado, String fechaMesInicioEstudio,
-			String fechaAñoInicioEstudio, String fechaMesFinalizacionEstudio, String fechaAñoFinalizacionEstudio,
+	public void tuFormacionAcademica(String nivelEstudio, String areaEstudios, String estado, String fechaMesInicioEstudio,
+			String fechaYearInicioEstudio, String fechaMesFinalizacionEstudio, String fechaYearFinalizacionEstudio,
 			String tituloOtorgado, String institucion, String otraInstitucion, String ciudadInstitucion) {
-		btnCompletarTuFormacionAcademica.click();
+		if (btnCompletarTuFormacionAcademica.isCurrentlyVisible()) {
+			btnCompletarTuFormacionAcademica.click();
+			esperaMientrasCarga();
+		}	
 		btnCompletarTusEstudios.click();
+		cmbNivelEstudio.selectByVisibleText(nivelEstudio);
+		helpers.esperaSelenium(2);
 		cmbAreaEstudio.selectByVisibleText(areaEstudios);
 		cmbEstado.selectByVisibleText(estado);
 		cmbFechaMesInicioEstudio.selectByVisibleText(fechaMesInicioEstudio);
-		txtFechaAñoInicioEstudio.sendKeys(fechaAñoInicioEstudio);
+		txtFechaYearInicioEstudio.sendKeys(fechaYearInicioEstudio);
 		if (cmbFechaMesFinalizacionEstudio.isCurrentlyEnabled()) {
 			cmbFechaMesFinalizacionEstudio.selectByVisibleText(fechaMesFinalizacionEstudio);
-			txtFechaAñoFinalizacionEstudio.sendKeys(fechaAñoFinalizacionEstudio);
+			txtFechaYearFinalizacionEstudio.sendKeys(fechaYearFinalizacionEstudio);
 		}
 		txtTituloOtorgado.sendKeys(tituloOtorgado);
 		txtInstitucion.sendKeys(institucion);
@@ -287,7 +307,18 @@ public class MiHojaDeVidaPage extends PageObject{
 				"//div[@class='module-collapsible collapse in']//input[@name = 'City.typehead']//following::div/div/div/strong[1]"));
 		selCiudadInstitucion.click();
 		btnGuardarEstudios.click();
-		helpers.esperaSelenium(15);
-
+		esperaMientrasCarga();
+		if (btnContinuar.isCurrentlyVisible()) {
+			btnContinuar.click();
+			esperaMientrasCarga();
+		}
+	}
+	
+	public void esperaMientrasCarga() {
+		this.getDriver().manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		do {
+			helpers.esperaSelenium(1);
+		} while ( spinner.isCurrentlyVisible() );
+		helpers.esperaSelenium(2);
 	}
 }

@@ -5,8 +5,8 @@ Característica: Crear Hoja de Vida
   deseo crear una hoja de vida
   para validar su correcto funcionamiento
 
-  @crearEmpleo
-  Esquema del escenario: Crear oferta de empleo
+  @crearHojaDeVida
+  Esquema del escenario: Crear hoja de vida ferias
     Dado que deseo crear una hoja de vida <Fila>
       | Ruta Excel                         | Pestaña       |
       | src/test/resources/data/Datos.xlsx | CrearHojaVida |
@@ -15,8 +15,8 @@ Característica: Crear Hoja de Vida
     Entonces puedo finalizar con creacion de la Hoja de vida
 
     Ejemplos: 
-      | Fila |   
-      |    1 | 
+      | Fila |
+      |    1 |
       |    2 |
-      |    5 |
-      |    6 |         
+      |    3 |
+      |    4 |

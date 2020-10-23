@@ -19,7 +19,7 @@ public class CrearHojaDeVidaStepsDefinition {
 
 	DataDrivenExcel dataDriverExcel = new DataDrivenExcel();
 	List<Map<String, String>> processExcel;
-	Map<String, String> data = new HashMap<String, String>();
+	Map<String, String> data = new HashMap<>();
 
 	@Steps
 	CrearHojaDeVidaSteps crearHojaDeVidaSteps;
@@ -46,12 +46,12 @@ public class CrearHojaDeVidaStepsDefinition {
 
 	@Entonces("^puedo finalizar con creacion de la Hoja de vida$")
 	public void puedoFinalizarConCreacionDeLaHojaDeVida() {
-		crearHojaDeVidaSteps.CompletarCreacionHojaDeVida(data.get("Contraseña"), data.get("Nombres"),
+		crearHojaDeVidaSteps.completarCreacionHojaDeVida(data.get("Contraseña"), data.get("Nombres"),
 				data.get("Primer Apellido"), data.get("Segundo Apellido"), data.get("Fecha Nacimiento"),
 				data.get("Tipo Estudio"), data.get("Profesión u Ocupación"), data.get("Ultimo Cargo Laboral"),
 				data.get("¿Dónde Trabajas o Trabajaste?"), data.get("¿A qué número te pueden llamar?"));
 		// assertTrue("No fue posible completar la creación del Perfil",
-		// crearHojaDeVidaSteps.confirmarCreaciónPerfil());
+		// crearHojaDeVidaSteps.confirmarCreacionPerfil());
 		crearHojaDeVidaSteps.completarSecciones(data.get("¿Completar Informacion Personal?"), data.get("Ciudad"),
 				data.get("Dirección"), data.get("Ciudad Nacimiento"), data.get("Telefono Secundario"),
 				data.get("¿Completar Perfil Laboral?"), data.get("Describe tu perfil"),
@@ -62,7 +62,8 @@ public class CrearHojaDeVidaStepsDefinition {
 				data.get("Fecha Mes Finalizacion"), data.get("Fecha Año Finalizacion"), data.get("Cargo Equivalente"),
 				data.get("Nivel Cargo"), data.get("Area"), data.get("Logros Resposabilidades"),
 				data.get("Telefono Empresa"), data.get("Ciudad Empresa"),
-				data.get("¿Completar  Tu formación académica?"), data.get("Area Estudios"), data.get("Estado Estudios"),
+				data.get("¿Completar  Tu formación académica?"), data.get("Nivel Estudio"),
+				data.get("Area Estudios"), data.get("Estado Estudios"),
 				data.get("Fecha Mes Inicio Estudios"), data.get("Fecha Año Inicio Estudios"),
 				data.get("Fecha Mes Finalizacion Estudios"), data.get("Fecha Año Finalizacion Estudios"),
 				data.get("Titulo Otorgado"), data.get("Institucion En La Que Estudiaste"), data.get("Otra Institucion"),

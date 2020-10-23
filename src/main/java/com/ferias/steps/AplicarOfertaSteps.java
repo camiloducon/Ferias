@@ -18,9 +18,9 @@ public class AplicarOfertaSteps {
 	}
 	
 	@Step
-	public void realizarLogin(String sitio, String usuario, String contraseña) {
+	public void realizarLogin(String sitio, String usuario, String contrasena) {
 		feriasPage.open();
-		feriasPage.login(usuario, contraseña);
+		feriasPage.login(usuario, contrasena);
 	}
 	
 	@Step
@@ -31,5 +31,10 @@ public class AplicarOfertaSteps {
 	@Step
 	public void buscarOferta(String oferta) {
 		unipanamericanaPage.realizarBusqueda(oferta);
+	}
+	
+	@Step
+	public boolean aplicacionDeOfertaExitosa() {
+		return unipanamericanaPage.aplicacionOfertaExitosa();
 	}
 }

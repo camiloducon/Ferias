@@ -2,6 +2,8 @@ package com.ferias.utils;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.Row;
@@ -11,13 +13,14 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class Datos {
 	XSSFWorkbook wb;
 	XSSFSheet sheet;
-
+	Logger logger  = Logger.getLogger(Datos.class.getName());
+	
 	public Datos(String excelPath) {
 		try {
 			FileInputStream fis = new FileInputStream(excelPath);
 			wb = new XSSFWorkbook(fis);
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			logger.log(Level.INFO, e.getMessage());
 		}
 	}
 
@@ -25,7 +28,7 @@ public class Datos {
 		sheet = wb.getSheet(pestana);
 		int rowCount = sheet.getLastRowNum() - sheet.getFirstRowNum();
 		// Create a loop over all the rows of excel file to read it
-		ArrayList<String[]> datos = new ArrayList<String[]>();
+		ArrayList<String[]> datos = new ArrayList<>();
 		for (int i = 1; i < rowCount + 1; i++) {
 			Row rowSheet = sheet.getRow(i);
 			// Create a loop to print cell values in a row
@@ -34,8 +37,6 @@ public class Datos {
 				switch (rowSheet.getCell(j).getCellType()) {
 				case NUMERIC:
 					if (DateUtil.isCellDateFormatted(rowSheet.getCell(j))) {
-						// SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-						// datosFila[j] = sdf.format(rowSheet.getCell(j).getDateCellValue());
 						long date = rowSheet.getCell(j).getDateCellValue().getTime();
 						datosFila[j] = date + "";
 					} else {

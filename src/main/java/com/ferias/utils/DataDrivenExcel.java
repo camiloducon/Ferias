@@ -8,12 +8,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class DataDrivenExcel {
 
+	Logger logger  = Logger.getLogger(DataDrivenExcel.class.getName());
 	private DecimalFormat df = new DecimalFormat("0.###");
 
 	public Map<String, String> leerExcel(Excel excel) {
@@ -26,7 +28,7 @@ public class DataDrivenExcel {
 			// Hoja del excel a usar
 			Sheet hojaArcExcel = libroExcel.getSheet(excel.getHojaExcel());
 			Iterator<Row> iterator = hojaArcExcel.iterator();
-			ArrayList<String> cabeceras = new ArrayList<String>();
+			ArrayList<String> cabeceras = new ArrayList<>();
 			// Ciclo de iteración por cada fila
 			while (iterator.hasNext()) {
 				Row filaActual = iterator.next();
@@ -68,7 +70,7 @@ public class DataDrivenExcel {
 			}
 			libroExcel.close();
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.log(Level.INFO, e.getMessage());
 		}
 		return datosExcel;
 	}

@@ -1,19 +1,18 @@
 package com.ferias.pages;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 import com.ferias.utils.Helpers;
-
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 
-@DefaultUrl("https://uatperson.elempleo.com/sitios-empresariales/colombia/feria-panamericana/registro.asp")
+//@DefaultUrl("https://uatperson.elempleo.com/sitios-empresariales/colombia/feria-panamericana/registro.asp")
+@DefaultUrl("https://www.elempleo.com/sitios-empresariales/colombia/feria-panamericana/preevento.asp") //preevento
+//@DefaultUrl("https://elempleo.com/sitios-empresariales/colombia/poli/registro.asp") // evento
 public class FeriasPage extends PageObject {
 
-	@FindBy(xpath = "//a[contains(text(),' hacerlo aquí')]")
+	@FindBy(xpath = "//a[contains(text(),' hacerlo aquí') or contains(text(), 'egistrar')]")
 	WebElementFacade btnCrear;
 
 	@FindBy(xpath = "//a[@href='ingresohv.asp' or @href='crear_sitio_empresarial.asp?tipo=19,19']")
@@ -26,9 +25,9 @@ public class FeriasPage extends PageObject {
 	WebElementFacade txtUsuario;
 
 	@FindBy(name = "txtpassword")
-	WebElementFacade txtContraseña;
+	WebElementFacade txtContrasena;
 
-	@FindBy(xpath = "//button[@class='btn btn-primary btn-block scroll pd']")
+	@FindBy(xpath = "//button[@class='btn btn-primary btn-block scroll pd' or @type='submit']")
 	WebElementFacade btnIngresar;
 
 	@FindBy(xpath = "//a[contains(text(),'Ofertas laborales')]")
@@ -46,9 +45,9 @@ public class FeriasPage extends PageObject {
 		btnCrear.click();
 	}
 
-	public void login(String usuario, String contraseña) {
+	public void login(String usuario, String contrasena) {
 		txtUsuario.sendKeys(usuario);
-		txtContraseña.sendKeys(contraseña);
+		txtContrasena.sendKeys(contrasena);
 		btnIngresar.click();
 		helpers.esperaSelenium(3);
 	}
